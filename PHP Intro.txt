@@ -311,23 +311,56 @@ switch(choice)
 
 Looping Statements in PHP
 
-1. for
-2. while
-3. do while
+Looping Statements in PHP
+
+1. for loop  (Counter Controlled Loop) : for loop is used when the no. of iterations are known in advance. A counter/iterator variable is used to control the no. of iterations. 
 
 Syntax:
 
 for(initialization;condition;updation)
 {
-	//statement(s)
+	//Syntax
 }
 
-//To Run a loop from 1 to 10
+e.g.
 
 for($i=1;$i<=10;$i++)
 {
-	
+	//statements
 }
+
+
+2. while loop (Sentinel Controlled Loop) 
+
+
+Sometimes, loop control may need to be based on the value of what we are processing. In this case, we would sentinel-controlled repetition. Sentinel-controlled repetition is sometimes called indefinite repetition because it is not known in advance how many times the loop will be executed. It is a repetition procedure for solving a problem by using a sentinel value (also called a signal value, a dummy value or a flag value) to indicate "end of data entry". The sentinel value itself is not a part of the processed data.
+
+
+Syntx:
+
+while(conditon)
+{
+	//statement(s)
+}
+
+
+while($record=mysqli_fetch_assoc($result))
+{
+}
+
+
+3. do.while loop : 
+
+do while loop is used when you have to execute the loop statement(s) atleast once.
+
+
+Syntax:
+
+do
+{
+	
+}while(condition);
+
 
 
 
