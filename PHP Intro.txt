@@ -412,6 +412,210 @@ Declaration:
 
 
 
+Array Operations
+
+//Addition of an element
+
+- Indexed Array
+
+$arr=array('Girish Attri','Ravi Kumar','Nikhil Verma')
+
+$arr[]='Ankit';				//Auto Indexing
+$arr[]='Pankaj Kapoor';
+
+
+- Associative Array
+
+$arr=array('UP'=>'Lucknow','Maharashtra'=>'Mumbai','Gujarat'=>'Gandhi Nagar');
+
+$arr['Rajasthan']=>'Jaipur';
+
+
+//Deletion of an Element
+
+- Indexed Array
+
+$arr=array('New Delhi','Chennai','Kolkata','Mumbai');
+
+unset($arr[1]);
+
+
+- Associative Array
+
+unset($arr['UP']);
+
+
+//Updating an Element
+
+- Indexed Array
+
+$arr=array('New Delhi','Chennai','Kolkata','Mumbai');
+$arr[1]='Hyderabad';
+
+- Associative Array
+
+$arr['Gujarat']='Ahmadabad';
+
+
+
+
+
+Array Functions
+
+1. array_unshift($arr,$value) : Inserts a new element in the array at the beginning.
+
+e.g.
+
+$arr=(54,76,45,87);
+
+array_unshift($arr,99);		//(99,54,76,45,87)
+
+2. array_shift($arr) : Deletes an  element from the beginning of an array.
+
+e.g.
+
+
+$arr=(54,76,45,87);
+array_shift($arr); 			//(76,45,87)
+
+
+3. array_push(array,value) : Inserts value at the end of the array
+
+e.g.
+
+$arr=(54,76,45,87);
+array_push($arr,99); 			//(54,76,45,87,99)
+
+
+4. array_pop(array) : Pops(Deletes) an element from the end of an array
+
+e.g.
+
+$arr=(54,76,45,87);
+array_pop($arr); 			//(54,76,45)
+
+
+5. array_sort(array) : Sorts an indexed array in ascending order.
+
+$arr=(54,76,45,87);
+array_sort($arr); 			//(45,54,76,87)
+
+
+5. array_rsort(array) : Sorts an indexed array in descending order.
+
+$arr=(54,76,45,87);
+array_rsort($arr); 			//(87,76,54,45)
+
+
+5. array_asort(array) : Sorts an associative array in ascending order (In the order of values).
+
+6. array_arsort(array) : Sorts an associative array in descending order (In the order of values).
+
+7. array_ksort(array) : Sorts an associative array in ascending order (In the order of keys).
+
+8. array_krsort(array) : Sorts an associative array in descending order (In the order of keys).
+
+9. extract(array) : Extracts each value from an associative array and create local variables with the name of keys.
+
+e.g.
+
+$capitals=array('UP'=>'Lucknow','Maharashtra'=>'Mumbai','Gujarat'=>'Gandhi Nagar');
+
+extract($capitals);
+echo $UP;
+echo $Maharashtra;
+
+10. count(array) : Returns the number of elements of an array.
+
+e.g.
+
+$arr=array(43,65,45,87,56);
+count($arr);					//5
+
+
+
+
+
+
+
+
+String Functions
+
+1. strlen(string) : Returns the length of the string.
+
+e.g.
+
+$name='Girish Attri';
+strlen($name);					//12
+
+
+2. strcmp(string1,string2) : Compares two strings, returns 0 if both strings are equal, a positive number if string1 is greater than string2, a negative number if string2 is greater than string1.
+
+e.g.
+
+$city="New Delhi";
+$userchoice="Delhi";
+
+strcmp($city,$userchoice);		//+
+
+
+3. strcat(string1,string2) : Joins string2 with string1.
+
+e.g.
+
+$firstname='Girish';
+$lastname='Attri';
+
+$name=strcat($firstname,$lastname);			//GirishAttri
+
+
+4. lcfirst(string) : Lower Character First.
+
+$string="Anil";
+lcfirst($string);			//anil
+
+5. ucfirst(string) : Upper Character First
+
+$string="anil";
+ucfirst($string);			//Anil
+
+6. ucwords(string) : Convert first character of every word to capital case.
+
+$string="samsung galaxy s7";
+ucwords($string);			//Samsung Galaxy S7
+
+7. lcwords(string)
+
+8. strtolower(string) : Converts the string into lower case.
+
+9. strtoupper(string) : Converts the string into upper case.
+
+10. substr(string,start,[length]) : Extracts specified no. of characters from start position. If length is not spefied all characters will be extract from the start position till end.
+
+e.g.
+
+$pcode="DEL2342";
+$citycode=substr($pcode,0,3);		//DEL
+
+
+11. substr_replace(string,replacemane,start,length) : Replace text with the given string.
+
+e.g.
+
+$pcode="DEL2342";
+$newcode=substr_replace($pcode,"MUM",0,3);		//MUM2342
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
