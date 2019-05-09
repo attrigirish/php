@@ -606,6 +606,145 @@ $pcode="DEL2342";
 $newcode=substr_replace($pcode,"MUM",0,3);		//MUM2342
 
 
+12. explode(separator,string) : Converts a string into array, separated by a separator.
+
+e.g.
+
+$string="C,C++,Java,Python,PHP";
+$skills=explode(',',$string);		//['C','C++','Java','Python','PHP']
+
+foreach($skills as $skill)
+{
+	echo $skill . "<br>";
+}
+
+
+13. implode(separator,array) : Joins array elements into a string value separated by separator.
+
+e.g.
+
+$skills=['C','C++','Java','PHP'];
+$string=implode(",", $skills);		//C,C++,Java,PHP
+
+
+
+14. preg_match(pattern,string) : Matches for specified pattern in the string.
+
+e.g.
+
+$filetype="image/jpeg";
+preg_match('/image/',$filetype)
+
+e.g.
+
+preg_match('/\d{4}-\d{4}-\d{4}-\d{4}/', $credit_card)
+
+
+15. str_shuffle(string,length) : Return a randomly shuffled string. 
+
+e.g.
+
+$otp=str_shuffle("0123456789ABCDEFGH");
+echo substr($otp,0,6);
+
+
+
+
+Date and Time Functions
+
+Data and Time Formatting Codes:
+
+m : Month 						(01-12)
+d : Day 						(01-31)
+w : Day of the Week				(0-6, 0 for Sunday)
+z : Day of year 				(0-365)
+y : Year 						(2008,2011)
+Y : Year 						(08, 11)
+H : Hour (24 Hrs) 				(00-23)
+h : Hour (12 Hrs) 				(00-11)
+i : Minutes  					(00-59)
+s : Seconds 					(00-59)
+
+
+1. date(format, [timestamp]) :  Return a formatted date based on the 					provided format string. The default is the current
+				UNIX timestamp, if $timestamp is not provided. 
+
+
+e.g.
+
+$date=date('d-m-y');					//03-05-2019
+
+$date=date('d-m-y',4234242423);
+echo $date;
+
+
+2. getdate() : Return an associative array representation of a
+					timestamp (Current Time). 
+
+
+eg.
+
+$cur_date=getdate();
+var_dump($cur_date);
+
+echo $cur_date['day'];
+
+
+3. date_create(string) : Creates a date from specified string.
+
+e.g.
+
+$date=date_create('2019-05-30');
+
+
+3. date_add(date,interval) : Adds days, months, years, hours, minutes, or seconds to specified date
+
+$interval=date_interval_create_from_date_string('1 month');
+$today=date_create(date('y-m-d'));
+$sub_end=date_add($today,$interval);
+
+
+4. date_sub(date,interval) : Subtract days, months, years, hours, minutes, or seconds to specified date
+
+$interval=date_interval_create_from_date_string('1 month 5 days');
+$today=date_create(date('y-m-d'));
+$sub_end=date_sub($today,$interval);
+echo date_format($sub_end,'d-M-y');
+
+github.com/attrigirish/php
+
+
+
+
+User Defined Functions
+----------------------
+
+
+Syntax:
+
+function <function-name>(<parameter(s)>)
+{
+	<function-definition>
+}
+
+
+e.g.
+
+function Sum($a,$b)
+{
+	$c=$a+$b;
+	return $c;
+}
+
+
+e.g.
+
+
+Write a function CalAvg() that will accept an array as a parameter and will return the average of all elements of an array.
+
+
+
+
 
 
 
