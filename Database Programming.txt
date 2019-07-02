@@ -1,0 +1,55 @@
+Database Programming
+
+Database Programming is about interacting with a database software and performing common database operations using the programming language interface. 
+
+
+A database provider is used in most programming languages to establish a connection with a database management software and to execute database queries. Different database providers are used for different database softwares.
+
+
+PHP Database Providers
+
+1. mysql 
+mysql database provider was used in versions prior to PHP 5.5. mysql provider is used for mysql database and use function to execute sql queries.
+
+2. mysqli 
+Release with version 5.5. Like mysql, mysqli provider is also used for mysql databases. mysqli provider uses both functional approach and object oriented approach of programming.
+
+
+3. pdo (PHP Data objects)
+Released with version 5.5. Unlike mysqli which is used for mysql databases only, pdo provider can be used for any database software. PDO uses object oriented approach.
+
+
+
+
+Mysql Database Software
+
+Mysql is a relational database management system (software). 
+
+Using Mysql
+
+1. Using Mysql console
+2. Using PhpMyAdmin web interface
+
+
+
+
+Database Programming using mysqli
+
+mysqli functions
+
+1. mysqli_connect(server,username,password,database) : Establish a connection with the mysql server. Returns a connection object is successful. Returns null otherwise.
+
+2. mysqli_query(connection,query) : Executes query using connection. Returns the number of records affected by last query for insert, delete or update queries. Returns mysqli_result object for select query.
+
+3. mysqli_error(connection) : Prints error message for last executed function if any.
+
+4. mysqli_num_rows(mysqli_result) : Tells number of rows in mysqli_result object.
+
+5. mysqli_fetch_assoc(mysqli_result) : Fetches a single record from mysqli_result object and returns it as an associative array. 
+
+
+
+
+
+
+
