@@ -1,0 +1,44 @@
+Arrays in PHP
+
+Arrays are collection of data elements.
+	- PHP Arrays are heterogeneous data structures.
+	- PHP Arrays are dynamic.
+
+Types of Arrays
+1. Indexed Arrays : A numeric identifier called index is used to access an element in the array. All elements in the array are provided with an index which could be used to either change the value of the element or read the value of the element.
+
+Declaration:
+
+array-name = array(value1,value2,value);
+
+e.g.
+
+$arr=array();
+$arr=array(11,22,33,44,55);
+$arr=array(12345,'Ankit','Java',16000);
+
+echo $arr[2];
+
+$arr[2]='Advance Java';
+
+
+
+2. Associative Arrays : An associative array or key-value pair array uses keys (identifiers) to access the elements of the given array. The keys in an associative array could be either of string data type, integer data or boolean data type.
+
+Declaration:
+
+array-name=array(key=>value, key=>value, key=>value);
+
+e.g.
+
+$student=array("id"=>12345,"name"=>"Anil Kumar","course"=>"Java","fees"=>16000);
+
+echo $student['course'];
+
+or
+
+$student['course']='Advance Java';
+
+
+
+

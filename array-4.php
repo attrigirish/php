@@ -8,11 +8,9 @@ $cities=array("New Delhi","Mumbai","Chennai","Kolkata","Hyderabad","Kochi","Beng
 	<title></title>
 </head>
 <body>
-	City : <select>
-		<option>Select City</option>
+	Cities : 
 		<?php foreach($cities as $city) { ?>
-		<option><?php echo $city; ?></option>		
+		<input type="radio"> <?php echo $city; ?>
 		<?php } ?>
-	</select>
 </body>
 </html>
