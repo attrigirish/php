@@ -42,3 +42,75 @@ $student['course']='Advance Java';
 
 
 
+Array Functions
+---------------
+
+
+1. array_unshift(array,value) : Adds a new value at the beginning of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_unshift($arr,99);			//[99,11,22,33,44,55]
+
+2. array_shift(array) : Removes the first value of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_shift($arr);			//[22,33,44,55]
+
+3. array_push(array,value) : Adds a new value at the end of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_push($arr,99);			//[11,22,33,44,55,99]
+
+4. array_pop(array) : Removes the last value of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_pop($arr);			//[11,22,33,44]
+
+5. sort(array) : Sorts an indexed array.
+
+e.g.
+
+$arr=array(55,22,44,11,33);
+sort($arr);					//[11,22,33,44,55]
+
+6. rsort(array) : Sorts an indexed array in reverse order.
+
+e.g.
+
+$arr=array(55,22,44,11,33);
+sort($arr);					//[55,44,33,22,11]
+
+7. asort(array) : Sorts an associative array in ascending order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+asort($cities);		//bhopal->chandigarh->chandigarh->lucknow
+
+8. arsort(array) : Sorts an associative array in descending order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+arsort($cities);		
+
+9. ksort(array) : Sorts an associative array in ascending order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+asort($cities);		//Haryana->Punjab->UP->MP
+
+10. krsort(array) : Sorts an associative array in as order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+krsort($cities);		
+
+
+
