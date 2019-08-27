@@ -1,0 +1,81 @@
+String : A string is a sequence of alphanumeric characters.
+
+e.g.
+
+$name="Anil Kumar";
+$address="5 Kapil Vihar";
+$code="AW23423";
+
+
+
+String Functions
+
+1. chr(number) : Returns a character from a specified ASCII value.
+
+e.g.
+
+$value=chr(65);			'A'
+
+
+2. lcfirst(string) : Converts the first character of a string to lowercase.
+
+3. ucfirst(string) : Converts the first character of a string to uppercase.
+
+4. ucwords(string) : Converts the first character of every word to uppercase.
+
+5. strtoupper(string) : Converts the string to upper case.
+
+6. strtolower(string) : Converts the string to lower case.
+
+7. rtrim(string) : Removes white spaces from the end of the string.
+
+8. ltrim(string) : Removes white spaces from the beginning of the string.
+
+9. trim(string) : Removes white spaces from both ends of the string.
+
+10. strcmp(string1,string2) : Compares two strings. 
+		-Returns +ve if string 1 is greater.
+		-Returns -ve if string 2 is greater.
+		-Returns 0 if both strings are equal.
+
+
+
+11. strcasecmp(string1,string2) : Compares two strings (Case Insensitive). 
+		-Returns +ve if string 1 is greater.
+		-Returns -ve if string 2 is greater.
+		-Returns 0 if both strings are equal.
+
+
+if(strcasecmpt("Anil","anil")==0){
+	
+}
+
+
+12. strpos(string,substring) : Finds the first occurrence of a string inside another string (case-sensitive). Returns the index if found, returns false otherwise.
+
+$url="www.mysite.com/myfolder/myfile.txt";
+echo strpos($url,"/");
+
+
+13. strrpos(string,substring) : Finds the last occurrence of a string inside another string (case-sensitive). Returns the index if found, returns false otherwise.
+
+
+$url="www.mysite.com/myfolder/myfile.txt";
+echo strrpos($url,"/");
+
+
+14. substr(string,start,length) : The substr() function returns a part of a string.
+
+$url="www.mysite.com/myfolder/myfile.txt";
+$folder=substr($url,strpos($url,"/"),strrpos($url,"/"))
+
+
+15. strstr(string, substring) : Finds the first occurrence of a string inside another string and returns the remainder part of the string.
+
+
+$url="www.mysite.com/myfolder/myfile.txt";
+echo strstr($url,"/");		//myfolder/myfile.txt
+
+
+16. str_shuffle(string) : Randomly shuffles all characters of the string.
+

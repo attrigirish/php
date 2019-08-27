@@ -113,4 +113,36 @@ $cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP
 krsort($cities);		
 
 
+11. explode(delim, String) : The explode() function splits a string based on a string delimeter. This functions returns an array containing the strings formed by splitting the original string.
+
+$input="girish@mail.com;ravi@mail.com"
+$email_ids=explode(";",$input);
+
+$data="1,2,3,4,5,6,7,8,9,10";
+$splitted_data=explode("," , $data);
+
+12. implode(delim,array) : The implode() is a builtin function in PHP and is used to join the elements of an array. 
+
+$data=array("C","C++","Java","PHP");
+$raw=implode(";", $data);
+
+Output
+"C;C++;Java;PHP"
+
+13. extract(array) : The extract() function does array to variable conversion. That is it converts array keys into variable names and array values into variable value. 
+
+e.g.
+
+$person=array("id"=>1234,"name"=>"Girish Attri","email"=>"girish@mail.com");
+
+
+//echo $person['id'];
+
+extract($person);
+
+echo $id;
+echo $name;
+echo $email;
+
+
 
