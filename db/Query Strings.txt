@@ -1,0 +1,9 @@
+Query Strings
+
+A query string is used to send data from one page to another or to same page during request-response cycle. Query Strings are defined in key-value pair. Query string is appended at the end of a url and starts with a ?.
+
+
+www.somesite.com?city=New Delhi
+
+
+

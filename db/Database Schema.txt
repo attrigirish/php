@@ -1,0 +1,19 @@
+Student
+
+create table student
+(
+	id int primary key,
+	name varchar(20),
+	course varchar(20),
+	fees decimal(10,2)
+);
+
+
+Profile
+
+create table profile
+(
+	id int primary key auto_increment,
+	name varchar(20),
+	url varchar(500)
+);
