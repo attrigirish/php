@@ -1,0 +1,45 @@
+Cookie
+
+A cookie is a small text file, which is used to store some trivial amount of data on the clients computer. Web developer use web cookies to store their clients/users preferences.
+
+Key Points:
+
+1. A cookie file can not be greater than 4KB.
+2. You cannot store more than 50 cookies for a single domain.
+3. A cookie can store only text type of data.
+4. A cookie can be either persistent or non persistent (temporary).
+5. A cookie can be accessed on any page in the given domain.
+
+
+
+#Creating/Saving a cookie
+
+setcookie(name, [value], [expires], [path], [domain], [secure], [httponly]);
+
+e.g.
+
+setcookie('name');		
+//Save a non-persistent cookie with an empty value.
+
+setcookie('name','Girish');
+//Save a non-persistent cookie with the specified value.
+
+
+setcookie('name','Girish',time()+60*60*24);
+//Save a persistent cookie for 24 hours.
+
+
+
+#Reading Cookie
+
+$_COOKIE['name']
+
+e.g.
+
+$name=$_COOKIE['name'];
+
+
+#Deleting a cookie
+
+setcookie('name','',time()-10);
+
