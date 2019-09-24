@@ -1,0 +1,59 @@
+AJAX (Asynchronous JavaScript and XML)
+
+AJAX is a programming concept which is used to partially update the content of web pages.
+
+
+//Step 1 : Creating  a request
+
+xhr=new XMLHttpRequest();
+
+//Step 2 : Initialize the request
+
+xhr.open("method","url");
+
+//Step 3 : Sending the request
+
+xhr.send();
+
+
+
+Request State
+
+0 : Request not Opened
+1 : Request Opened
+2 : Request Sent
+3 : Server is processing the request
+4 : Request is completed
+
+
+//Step 4 : Knowing Request State
+
+xhr.onreadystatechange=function()
+{
+	if(xhr.readyState==4)
+	{
+		//Request Completed
+	}	
+}
+
+
+XML and JSON are two data interchange formats which are used to transfer data from one machine to another. Though AJAX was initially designed to be worked with XML data but nowadays programmers preferes to used JSON ovr XML.
+
+
+A sample record in XML and JSON
+
+XML
+
+<student>
+	<id>1</id>
+	<name>Girish Attri</name>
+	<course>Python</course>
+	<fees>16000</fees>
+</student>
+
+
+JSON
+
+{'id':1, 'name':'Girish Attri','course':'Java','fees':16000}
+
+
