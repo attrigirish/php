@@ -3,20 +3,25 @@
 include 'dl/dl.php';
 include 'bl/bl.php';
 
+$pid=$_GET['pid'];
+
+
 if(count($_POST)!=0)
 {
 	$result=ValidateProductData($_POST);
 	if($result===true){
 		extract($_POST);		
-		$createdon=date('y-m-d 12:00:00');
+		$updatedon=date('y-m-d 12:00:00');
 		$url=UploadFile($_FILES);
-		$issaved=AddProduct($name,$brand,$price,$url,$createdon);
+		$issaved=UpdateProduct($pid,$name,$brand,$price,$url,$updatedon);
 	}
 	else
 	{
 		$issaved=false;
 	}
 }
+
+$product=GetProduct($pid);
 
 ?>
 
@@ -45,7 +50,7 @@ if(count($_POST)!=0)
 				  <div class="form-group row">
 				    <label class="col-sm-2 col-form-label">Name</label>
 				    <div class="col-sm-10">
-				     	<input type="text" class="form-control" name="name"> 
+				     	<input type="text" class="form-control" name="name" value="<?php echo $product['name']; ?>"> 
 				     	<small class="form-text text-muted"><?php echo @$result['name']; ?></small>	      
 				    </div>
 				     
@@ -53,14 +58,14 @@ if(count($_POST)!=0)
 				  <div class="form-group row">
 				    <label class="col-sm-2 col-form-label">Brand</label>
 				    <div class="col-sm-10">
-				      <input type="text" class="form-control" name="brand">
+				      <input type="text" class="form-control" name="brand" value="<?php echo $product['brand']; ?>">
 				      <small class="form-text text-muted"><?php echo @$result['brand']; ?></small>	
 				    </div>
 				  </div>
 				  <div class="form-group row">
 				    <label class="col-sm-2 col-form-label">Price</label>
 				    <div class="col-sm-10">
-				      <input type="text" class="form-control" name="price">
+				      <input type="text" class="form-control" name="price" value="<?php echo $product['price']; ?>">
 				    </div>
 				  </div>
 				  <div class="form-group row">

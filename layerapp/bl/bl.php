@@ -1,6 +1,6 @@
 <?php
 
-function ValidateAddProductData($posteddata)
+function ValidateProductData($posteddata)
 {
 	extract($posteddata);
 
@@ -28,6 +28,18 @@ function ValidateAddProductData($posteddata)
 	{
 		return true;
 	}
+}
+
+function UploadFile($filedata)
+{
+	extract($filedata);
+	$filename=$photo['name'];
+	$tempname=$photo['tmp_name'];
+
+	$url='uploads/' . $filename;
+
+	move_uploaded_file($tempname, $url);
+	return $url;
 }
 
 ?>
